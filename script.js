@@ -4,41 +4,107 @@ function getComputerChoice(){
     return choice;
     
 }
+let playerScore = 0;
+let computerScore = 0;
+
+//compare results
+function playRound(computer, player) {
+
+    if (computer === player) {
+        alert('It\'s a tie!');
+        playerScore ++;
+        computerScore ++;
+        return playerScore, computerScore;
+    }
+    else if (computer === 1 && player === 2) {
+        alert("You win! Paper beats Rock")
+        playerScore ++;
+        return playerScore;
+    }
+    else if (computer === 2 && player === 3) {
+        alert("You win! Scissors beat Paper")
+        playerScore ++;
+        return playerScore;
+    }
+    else if (computer === 3 && player === 1) {
+        alert("You win! Rock beats Scissors")
+        playerScore ++;
+        return playerScore;
+    }
+    
+    else if (computer === 2 && player === 1) {
+        alert("You lose! Paper beats Rock")
+        computerScore ++;
+        return computerScore;
+    }
+    else if (computer === 3 && player === 2) {
+        alert("You lose! Scissors beat Paper")
+        computerScore ++;
+        return computerScore;
+    }
+    else if (computer === 1 && player === 3) {
+        alert("You lose! Rock beats Scissors")
+        computerScore ++;
+        return computerScore;
+    }
+    
+    else alert("Something went wrong!");
+        computerScore ++;
+        return computerScore;
+    }
 
 // Let player choose rock, paper or scissors.
-//let playerChoice = 0;
-let playerChoice = prompt("Rock, paper, scissors? ");
-playerChoice = playerChoice.toLowerCase();
-console.log("player Choice : ", playerChoice);
+for (let i = 0; i < 5; i++) {
+    let playerChoice = prompt("Rock, paper, scissors? ");
+    playerChoice = playerChoice.toLowerCase();
+    console.log("player Choice : ", playerChoice);
 
-// Computer choice
-//let computerSelection = 0;
-const computerSelection = getComputerChoice();
-console.log("computerSelection: " , computerSelection);
+    // Computer choice
+
+    let computerSelection = getComputerChoice();
+    console.log("computerSelection: " , computerSelection);
 
 
-// Convert selection to number.
+    // Convert selection to number.
 
-let playerSelection;
+    let playerSelection;
 
-if (playerChoice === 'rock') {
-    playerSelection = 1;
+    if (playerChoice === 'rock') {
+        playerSelection = 1;
+    }
+    else if (playerChoice === 'paper') {
+        playerSelection = 2;
+    }
+    else if (playerChoice ==='scissors') {
+        playerSelection = 3;
+    }
+    else alert('Incorrect selection');
+
+    console.log("player Selection: ", playerSelection);
+
+
+    // Compare and choose who won.
+    //  console.log("computerSelection extra: " , computerSelection);
+
+
+        playRound(computerSelection, playerSelection);
+        computerSelection = computerSelection;
+        playerSelection = playerSelection;
+        console.log(playerScore, computerScore);
 }
-else if (playerChoice === 'paper') {
-    playerSelection = 2;
+if (playerScore > computerScore) {
+    alert("Player: " + playerScore + ". Computer: " + computerScore + ". Player win!");
 }
-else if (playerChoice ==='scissors') {
-    playerSelection = 3;
+else if (playerScore < computerScore) {
+    alert("Player:  " + playerScore + ". Computer: " + computerScore + " .Computer wins!");
 }
-else alert('Incorrect selection');
-
-console.log("player Selection: ", playerSelection);
+else alert("Player:  " + playerScore + ". Computer: " + computerScore +  ". It's a tie!");
 
 
-// Compare and choose who won.
-console.log("computerSelection extra: " , computerSelection);
+// Generate random number for computer
+// If number 
 
-if (computerSelection === playerSelection) {
+/*if (computerSelection === playerSelection) {
     alert('It\'s a tie!');
 }
 else if (computerSelection === 1 && playerSelection === 2) {
@@ -61,7 +127,4 @@ else if (computerSelection === 1 && playerSelection === 3) {
     alert("You lose! Rock beats Scissors")
 }
 
-else alert("Something went wrong!");
-
-// Generate random number for computer
-// If number 
+else alert("Something went wrong!");*/
