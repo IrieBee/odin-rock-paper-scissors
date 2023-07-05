@@ -48,7 +48,7 @@ function playRound(computer, player) {
         return computerScore;
     }
     
-    else alert("Something went wrong!");
+    else alert("You messed up. You lose!");
         computerScore ++;
         return computerScore;
     }
@@ -78,7 +78,7 @@ for (let i = 0; i < 5; i++) {
     else if (playerChoice ==='scissors') {
         playerSelection = 3;
     }
-    else alert('Incorrect selection');
+    //else alert('Incorrect selection');
 
     console.log("player Selection: ", playerSelection);
 
@@ -88,8 +88,8 @@ for (let i = 0; i < 5; i++) {
 
 
         playRound(computerSelection, playerSelection);
-        computerSelection = computerSelection;
-        playerSelection = playerSelection;
+        //computerSelection = computerSelection;
+        //playerSelection = playerSelection;
         console.log(playerScore, computerScore);
 }
 if (playerScore > computerScore) {
@@ -101,30 +101,3 @@ else if (playerScore < computerScore) {
 else alert("Player:  " + playerScore + ". Computer: " + computerScore +  ". It's a tie!");
 
 
-// Generate random number for computer
-// If number 
-
-/*if (computerSelection === playerSelection) {
-    alert('It\'s a tie!');
-}
-else if (computerSelection === 1 && playerSelection === 2) {
-    alert("You win! Paper beats Rock")
-}
-else if (computerSelection === 2 && playerSelection === 3) {
-    alert("You win! Scissors beat Paper")
-}
-else if (computerSelection === 3 && playerSelection === 1) {
-    alert("You win! Rock beats Scissors")
-}
-
-else if (computerSelection === 2 && playerSelection === 1) {
-    alert("You lose! Paper beats Rock")
-}
-else if (computerSelection === 3 && playerSelection === 2) {
-    alert("You lose! Scissors beat Paper")
-}
-else if (computerSelection === 1 && playerSelection === 3) {
-    alert("You lose! Rock beats Scissors")
-}
-
-else alert("Something went wrong!");*/
