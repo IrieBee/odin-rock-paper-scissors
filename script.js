@@ -6,35 +6,38 @@ function getComputerChoice(){
 }
 
 // Let player choose rock, paper or scissors.
-let playerSelection = 0;
-playerSelection = prompt("Rock, paper, scissors? ");
-playerSelection = playerSelection.toLowerCase();
-console.log(playerSelection);
+//let playerChoice = 0;
+let playerChoice = prompt("Rock, paper, scissors? ");
+playerChoice = playerChoice.toLowerCase();
+console.log("player Choice : ", playerChoice);
 
 // Computer choice
-let computerSelection = 0;
-computerSelection = getComputerChoice();
-console.log(getComputerChoice(computerSelection));
+//let computerSelection = 0;
+const computerSelection = getComputerChoice();
+console.log("computerSelection: " , computerSelection);
 
 
 // Convert selection to number.
 
+let playerSelection;
 
-if (playerSelection === 'rock') {
+if (playerChoice === 'rock') {
     playerSelection = 1;
 }
-else if (playerSelection === 'paper') {
+else if (playerChoice === 'paper') {
     playerSelection = 2;
 }
-else if (playerSelection ==='scissors') {
+else if (playerChoice ==='scissors') {
     playerSelection = 3;
 }
 else alert('Incorrect selection');
 
-console.log(playerSelection);
+console.log("player Selection: ", playerSelection);
 
 
 // Compare and choose who won.
+console.log("computerSelection extra: " , computerSelection);
+
 if (computerSelection === playerSelection) {
     alert('It\'s a tie!');
 }
