@@ -92,6 +92,8 @@ for (let i = 0; i < 5; i++) {
         //playerSelection = playerSelection;
         console.log(playerScore, computerScore);
 }
+
+
 if (playerScore > computerScore) {
     alert("Player: " + playerScore + ". Computer: " + computerScore + ". Player win!");
 }
