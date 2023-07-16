@@ -1,11 +1,40 @@
+// Player choice
+//let playerSelection = 0;
+
+const playerChoice = Array.from(document.querySelectorAll('button'));
+playerChoice.forEach(choice => {
+    choice.onclick =  () => {
+        let playerSelection =  playerChoice.indexOf(choice) + 1;
+        console.log('playerSelection: ', playerSelection);
+        
+        let computerSelection = getComputerChoice();
+        console.log("computerSelection: " , computerSelection);
+
+        playRound(computerSelection, playerSelection);
+    }
+})
+console.log('playerChoice: ', playerChoice);
+
+
+// let computerSelection = getComputerChoice();
+// console.log("computerSelection: " , computerSelection);
+
+
+
 // Create random number (1,2 or 3) generator for computer
 function getComputerChoice(){
     let choice = Math.floor(Math.random() * 3 + 1);
     return choice;
 }
 
+// playRound(computerSelection, playerSelection);
+//console.log(playerSelection, computerScore);
+
+
 // Compare results
 function playRound(computer, player) {
+    let computerScore = 0;
+    let playerScore = 0;
 
     if (computer === player) {
         alert('It\'s a tie!');
@@ -45,32 +74,10 @@ function playRound(computer, player) {
         return computerScore;
     }
     
-    else alert("You messed up. You lose!");
-        computerScore ++;
-        return computerScore;
+    // else alert("You messed up. You lose!");
+    //     computerScore ++;
+    //     return computerScore;
     }
-
-// Player choice
-
-let playerSelection = 0;
-let computerScore = 0;
-
-const playerChoice = Array.from(document.querySelectorAll('button'));
-console.log(playerChoice);
-playerChoice.forEach(function(choice) {
-    choice.onclick =  function() {
-        playerSelection =  playerChoice.indexOf(choice) + 1;
-        console.log(playerSelection);
-    }
-})
-
-let computerSelection = getComputerChoice();
-console.log("computerSelection: " , computerSelection);
-
-
-playRound(computerSelection, playerSelection);
-//console.log(playerSelection, computerScore);
-
 
 
         // OLD CODE
