@@ -1,19 +1,34 @@
-// Player choice
-//let playerSelection = 0;
 
+// Player choice
 const playerChoice = Array.from(document.querySelectorAll('button'));
+let computerScore = 0;
+let playerScore = 0;
+
+
+
 playerChoice.forEach(choice => {
     choice.onclick =  () => {
         let playerSelection =  playerChoice.indexOf(choice) + 1;
         console.log('playerSelection: ', playerSelection);
-        
+
         let computerSelection = getComputerChoice();
         console.log("computerSelection: " , computerSelection);
+        
 
         playRound(computerSelection, playerSelection);
+        console.log(computerScore, playerScore);
     }
 })
-console.log('playerChoice: ', playerChoice);
+
+// else if (playerScore > computerScore) {
+//     alert("Player: " + playerScore + ". Computer: " + computerScore + ". Player win!");
+// }
+// else if (playerScore < computerScore) {
+//     alert("Player:  " + playerScore + ". Computer: " + computerScore + " .Computer wins!");
+// }
+// else alert("Player:  " + playerScore + ". Computer: " + computerScore +  ". It's a tie!");
+
+// console.log('playerChoice: ', playerChoice);
 
 
 // let computerSelection = getComputerChoice();
@@ -33,8 +48,6 @@ function getComputerChoice(){
 
 // Compare results
 function playRound(computer, player) {
-    let computerScore = 0;
-    let playerScore = 0;
 
     if (computer === player) {
         alert('It\'s a tie!');
@@ -73,11 +86,7 @@ function playRound(computer, player) {
         computerScore ++;
         return computerScore;
     }
-    
-    // else alert("You messed up. You lose!");
-    //     computerScore ++;
-    //     return computerScore;
-    }
+}
 
 
         // OLD CODE
