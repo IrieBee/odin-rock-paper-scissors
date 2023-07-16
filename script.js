@@ -14,7 +14,6 @@ playerChoice.forEach(choice => {
         let computerSelection = getComputerChoice();
         console.log("computerSelection: " , computerSelection);
         
-
         playRound(computerSelection, playerSelection);
         console.log(computerScore, playerScore);
     }

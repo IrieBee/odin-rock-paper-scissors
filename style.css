@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: hsl(180, 50%, 10%);
+    background-color: hsl(180, 50%, 16%);
 }
 
 button {
@@ -15,4 +15,10 @@ button {
     border-color: hsl(330, 30%, 50%);
     border-width: 3px;
     box-shadow: 10px 10px 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
 }
