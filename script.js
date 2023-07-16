@@ -2,12 +2,9 @@
 function getComputerChoice(){
     let choice = Math.floor(Math.random() * 3 + 1);
     return choice;
-    
 }
-let playerScore = 0;
-let computerScore = 0;
 
-//compare results
+// Compare results
 function playRound(computer, player) {
 
     if (computer === player) {
@@ -53,53 +50,78 @@ function playRound(computer, player) {
         return computerScore;
     }
 
-// Let player choose rock, paper or scissors.
-for (let i = 0; i < 5; i++) {
-    let playerChoice = prompt("Rock, paper, scissors? ");
-    playerChoice = playerChoice.toLowerCase();
-    console.log("player Choice : ", playerChoice);
+// Player choice
 
-    // Computer choice
+let playerSelection = 0;
+let computerScore = 0;
 
-    let computerSelection = getComputerChoice();
-    console.log("computerSelection: " , computerSelection);
-
-
-    // Convert selection to number.
-
-    let playerSelection;
-
-    if (playerChoice === 'rock') {
-        playerSelection = 1;
+const playerChoice = Array.from(document.querySelectorAll('button'));
+console.log(playerChoice);
+playerChoice.forEach(function(choice) {
+    choice.onclick =  function() {
+        playerSelection =  playerChoice.indexOf(choice) + 1;
+        console.log(playerSelection);
     }
-    else if (playerChoice === 'paper') {
-        playerSelection = 2;
-    }
-    else if (playerChoice ==='scissors') {
-        playerSelection = 3;
-    }
-    //else alert('Incorrect selection');
+})
 
-    console.log("player Selection: ", playerSelection);
+let computerSelection = getComputerChoice();
+console.log("computerSelection: " , computerSelection);
+
+
+playRound(computerSelection, playerSelection);
+//console.log(playerSelection, computerScore);
+
+
+
+        // OLD CODE
+
+// // Let player choose rock, paper or scissors.
+// for (let i = 0; i < 5; i++) {
+//     let playerChoice = prompt("Rock, paper, scissors? ");
+//     playerChoice = playerChoice.toLowerCase();
+//     console.log("player Choice : ", playerChoice);
+
+//     // Computer choice
+
+//     let computerSelection = getComputerChoice();
+//     console.log("computerSelection: " , computerSelection);
+
+
+//     // Convert selection to number.
+
+//     let playerSelection;
+
+//     if (playerChoice === 'rock') {
+//         playerSelection = 1;
+//     }
+//     else if (playerChoice === 'paper') {
+//         playerSelection = 2;
+//     }
+//     else if (playerChoice ==='scissors') {
+//         playerSelection = 3;
+//     }
+//     //else alert('Incorrect selection');
+
+//     console.log("player Selection: ", playerSelection);
 
 
     // Compare and choose who won.
     //  console.log("computerSelection extra: " , computerSelection);
 
 
-        playRound(computerSelection, playerSelection);
-        //computerSelection = computerSelection;
-        //playerSelection = playerSelection;
-        console.log(playerScore, computerScore);
-}
+//         playRound(computerSelection, playerSelection);
+//         //computerSelection = computerSelection;
+//         //playerSelection = playerSelection;
+//         console.log(playerScore, computerScore);
+// }
 
 
-if (playerScore > computerScore) {
-    alert("Player: " + playerScore + ". Computer: " + computerScore + ". Player win!");
-}
-else if (playerScore < computerScore) {
-    alert("Player:  " + playerScore + ". Computer: " + computerScore + " .Computer wins!");
-}
-else alert("Player:  " + playerScore + ". Computer: " + computerScore +  ". It's a tie!");
+// if (playerScore > computerScore) {
+//     alert("Player: " + playerScore + ". Computer: " + computerScore + ". Player win!");
+// }
+// else if (playerScore < computerScore) {
+//     alert("Player:  " + playerScore + ". Computer: " + computerScore + " .Computer wins!");
+// }
+// else alert("Player:  " + playerScore + ". Computer: " + computerScore +  ". It's a tie!");
 
 
