@@ -9,11 +9,10 @@ body {
 }
 
 button {
-    background-color: hsl(340, 50%, 90%);
+    background-color: hsl(330, 50%, 90%);
     padding: 16px 32px;
     border-radius: 50%;
-    border-color: hsl(330, 30%, 50%);
-    border-width: 3px;
+    border: 3px solid hsl(330, 40%, 40%);
     box-shadow: 10px 10px 20px;
 }
 
