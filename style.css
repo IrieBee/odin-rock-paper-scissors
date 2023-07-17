@@ -14,7 +14,7 @@ h1 {
     border-bottom: 5px solid hsl(330, 40%, 8%);
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
     color: hsl(330, 50%, 90%);
     letter-spacing: 5px;
     word-spacing: 1rem;
@@ -25,6 +25,18 @@ h1, h2 {
 h2 {
     font: bold 32px Verdana;
     border-bottom: 5px solid hsl(180, 50%, 8%);
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+ 
+}
+
+h3, h5{
+    font: bold 24px Verdana;
+    letter-spacing: 6px;
+    word-spacing: 3rem;
 }
 
 button {

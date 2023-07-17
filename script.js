@@ -1,4 +1,5 @@
 const announce = document.querySelector('h2');
+const score = document.querySelector('h5');
 // Player choice
 const playerChoice = Array.from(document.querySelectorAll('button'));
 let computerScore = 0;
@@ -33,37 +34,44 @@ function playRound(computer, player) {
         announce.textContent = 'It\'s a tie!';
         playerScore ++;
         computerScore ++;
+        score.textContent = computerScore + " : " + playerScore;
         return playerScore, computerScore;
     }
     else if (computer === 1 && player === 2) {
         announce.textContent = "You win! Paper beats Rock.";
         playerScore ++;
+        score.textContent = computerScore + " : " + playerScore;
         return playerScore;
     }
     else if (computer === 2 && player === 3) {
         announce.textContent = "You win! Scissors beat Paper.";
         playerScore ++;
+        score.textContent = computerScore + " : " + playerScore;
         return playerScore;
     }
     else if (computer === 3 && player === 1) {
         announce.textContent = "You win! Rock beats Scissors.";
         playerScore ++;
+        score.textContent = computerScore + " : " + playerScore;
         return playerScore;
     }
     
     else if (computer === 2 && player === 1) {
         announce.textContent = "You lose! Paper beats Rock.";
         computerScore ++;
+        score.textContent = computerScore + " : " + playerScore;
         return computerScore;
     }
     else if (computer === 3 && player === 2) {
         announce.textContent = "You lose! Scissors beat Paper.";
         computerScore ++;
+        score.textContent = computerScore + " : " + playerScore;
         return computerScore;
     }
     else if (computer === 1 && player === 3) {
         announce.textContent = "You lose! Rock beats Scissors.";
         computerScore ++;
+        score.textContent = computerScore + " : " + playerScore;
         return computerScore;
     }
 }
