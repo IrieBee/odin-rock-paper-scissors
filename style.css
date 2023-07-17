@@ -5,7 +5,26 @@
 }
 
 body {
-    background-color: hsl(180, 50%, 16%);
+    background-color: hsl(180, 40%, 16%);
+}
+
+h1 {
+    background-color: hsl(330, 40%, 20%);
+    font: bold 44px Verdana;
+    border-bottom: 5px solid hsl(330, 40%, 8%);
+}
+
+h1, h2 {
+    color: hsl(330, 50%, 90%);
+    letter-spacing: 5px;
+    word-spacing: 1rem;
+    padding: 32px;
+    text-align: center;
+}
+
+h2 {
+    font: bold 32px Verdana;
+    border-bottom: 5px solid hsl(180, 50%, 8%);
 }
 
 button {
@@ -13,11 +32,17 @@ button {
     padding: 16px 32px;
     border-radius: 50%;
     border: 3px solid hsl(330, 40%, 40%);
-    box-shadow: 10px 10px 20px;
+    box-shadow: 10px 10px 20px hsl(180, 50%, 8%);
+    font: bold 20px Verdana;
+    color: hsl(180, 50%, 8%)
+}
+
+button:hover {
+    box-shadow: 2px 2px 40px  hsl(180, 40%, 26%);
 }
 
 .button {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 100px;
+    margin-top: 50px;
 }

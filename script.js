@@ -5,7 +5,6 @@ let computerScore = 0;
 let playerScore = 0;
 
 
-
 playerChoice.forEach(choice => {
     choice.onclick =  () => {
         let playerSelection =  playerChoice.indexOf(choice) + 1;
@@ -17,22 +16,8 @@ playerChoice.forEach(choice => {
         playRound(computerSelection, playerSelection);
         console.log(computerScore, playerScore);
     }
+    console.log('computer : player  ', computerScore, playerScore);
 })
-
-// else if (playerScore > computerScore) {
-//     alert("Player: " + playerScore + ". Computer: " + computerScore + ". Player win!");
-// }
-// else if (playerScore < computerScore) {
-//     alert("Player:  " + playerScore + ". Computer: " + computerScore + " .Computer wins!");
-// }
-// else alert("Player:  " + playerScore + ". Computer: " + computerScore +  ". It's a tie!");
-
-// console.log('playerChoice: ', playerChoice);
-
-
-// let computerSelection = getComputerChoice();
-// console.log("computerSelection: " , computerSelection);
-
 
 
 // Create random number (1,2 or 3) generator for computer
@@ -40,10 +25,6 @@ function getComputerChoice(){
     let choice = Math.floor(Math.random() * 3 + 1);
     return choice;
 }
-
-// playRound(computerSelection, playerSelection);
-//console.log(playerSelection, computerScore);
-
 
 // Compare results
 function playRound(computer, player) {
