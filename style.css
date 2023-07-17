@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-    font: bold 32px Verdana;
+    font: bold italic 32px Verdana;
     border-bottom: 5px solid hsl(180, 50%, 8%);
 }
 
@@ -34,7 +34,7 @@ h2 {
 }
 
 h3, h5{
-    font: bold 24px Verdana;
+    font: bold 28px Verdana;
     letter-spacing: 6px;
     word-spacing: 3rem;
 }

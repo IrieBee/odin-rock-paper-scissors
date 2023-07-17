@@ -5,21 +5,30 @@ const playerChoice = Array.from(document.querySelectorAll('button'));
 let computerScore = 0;
 let playerScore = 0;
 
-
 playerChoice.forEach(choice => {
     choice.onclick =  () => {
         let playerSelection =  playerChoice.indexOf(choice) + 1;
         console.log('playerSelection: ', playerSelection);
 
-        let computerSelection = getComputerChoice();
+        const computerSelection = getComputerChoice();
         console.log("computerSelection: " , computerSelection);
         
         playRound(computerSelection, playerSelection);
-        console.log(computerScore, playerScore);
-    }
-    console.log('computer : player  ', computerScore, playerScore);
-})
+            console.log(computerScore, playerScore);
 
+        if (playerScore == 5 || computerScore == 5) {
+            if (playerScore > computerScore) {
+                announce.textContent = "Player: " + playerScore + ". Computer: " + computerScore + ". Player wins!";
+            }
+            else if (playerScore < computerScore) {
+                announce.textContent = "Player:  " + playerScore + ". Computer: " + computerScore + " .Computer wins!";
+            }
+            else announce.textContent = "Player:  " + playerScore + ". Computer: " + computerScore +  ". It's a tie!";
+            }
+            console.log('computer : player  ', computerScore, playerScore);
+
+    }
+})
 
 // Create random number (1,2 or 3) generator for computer
 function getComputerChoice(){
@@ -29,7 +38,6 @@ function getComputerChoice(){
 
 // Compare results
 function playRound(computer, player) {
-
     if (computer === player) {
         announce.textContent = 'It\'s a tie!';
         playerScore ++;
@@ -75,57 +83,5 @@ function playRound(computer, player) {
         return computerScore;
     }
 }
-
-
-        // OLD CODE
-
-// // Let player choose rock, paper or scissors.
-// for (let i = 0; i < 5; i++) {
-//     let playerChoice = prompt("Rock, paper, scissors? ");
-//     playerChoice = playerChoice.toLowerCase();
-//     console.log("player Choice : ", playerChoice);
-
-//     // Computer choice
-
-//     let computerSelection = getComputerChoice();
-//     console.log("computerSelection: " , computerSelection);
-
-
-//     // Convert selection to number.
-
-//     let playerSelection;
-
-//     if (playerChoice === 'rock') {
-//         playerSelection = 1;
-//     }
-//     else if (playerChoice === 'paper') {
-//         playerSelection = 2;
-//     }
-//     else if (playerChoice ==='scissors') {
-//         playerSelection = 3;
-//     }
-//     //else alert('Incorrect selection');
-
-//     console.log("player Selection: ", playerSelection);
-
-
-    // Compare and choose who won.
-    //  console.log("computerSelection extra: " , computerSelection);
-
-
-//         playRound(computerSelection, playerSelection);
-//         //computerSelection = computerSelection;
-//         //playerSelection = playerSelection;
-//         console.log(playerScore, computerScore);
-// }
-
-
-// if (playerScore > computerScore) {
-//     alert("Player: " + playerScore + ". Computer: " + computerScore + ". Player win!");
-// }
-// else if (playerScore < computerScore) {
-//     alert("Player:  " + playerScore + ". Computer: " + computerScore + " .Computer wins!");
-// }
-// else alert("Player:  " + playerScore + ". Computer: " + computerScore +  ". It's a tie!");
 
 
