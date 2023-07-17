@@ -18,17 +18,20 @@ playerChoice.forEach(choice => {
 
         if (playerScore == 5 || computerScore == 5) {
             if (playerScore > computerScore) {
-                announce.textContent = "Player: " + playerScore + ". Computer: " + computerScore + ". Player wins!";
+                    alert("Human : " + playerScore + ".  Robot : " + computerScore + ".  Human wins!");
+                location.reload();
             }
             else if (playerScore < computerScore) {
-                announce.textContent = "Player:  " + playerScore + ". Computer: " + computerScore + " .Computer wins!";
+                alert("Human : " + playerScore + ".  Robot : " + computerScore + " .  Robot wins!");
+                location.reload();
             }
-            else announce.textContent = "Player:  " + playerScore + ". Computer: " + computerScore +  ". It's a tie!";
+            else alert("Human : " + playerScore + ".  Robot : " + computerScore +  ".  It's a tie!");
+            location.reload();
             }
             console.log('computer : player  ', computerScore, playerScore);
-
     }
 })
+
 
 // Create random number (1,2 or 3) generator for computer
 function getComputerChoice(){
@@ -42,45 +45,41 @@ function playRound(computer, player) {
         announce.textContent = 'It\'s a tie!';
         playerScore ++;
         computerScore ++;
-        score.textContent = computerScore + " : " + playerScore;
-        return playerScore, computerScore;
+        score.textContent = playerScore + " : " + computerScore;
     }
     else if (computer === 1 && player === 2) {
         announce.textContent = "You win! Paper beats Rock.";
         playerScore ++;
-        score.textContent = computerScore + " : " + playerScore;
-        return playerScore;
+        score.textContent = playerScore + " : " + computerScore;
     }
     else if (computer === 2 && player === 3) {
         announce.textContent = "You win! Scissors beat Paper.";
         playerScore ++;
-        score.textContent = computerScore + " : " + playerScore;
-        return playerScore;
+        score.textContent = playerScore + " : " + computerScore;
     }
     else if (computer === 3 && player === 1) {
         announce.textContent = "You win! Rock beats Scissors.";
         playerScore ++;
-        score.textContent = computerScore + " : " + playerScore;
-        return playerScore;
+        score.textContent = playerScore + " : " + computerScore;
     }
     
     else if (computer === 2 && player === 1) {
-        announce.textContent = "You lose! Paper beats Rock.";
+        announce.textContent = "Robot wins! Paper beats Rock.";
         computerScore ++;
-        score.textContent = computerScore + " : " + playerScore;
-        return computerScore;
+        score.textContent = playerScore + " : " + computerScore;
+        // return computerScore;
     }
     else if (computer === 3 && player === 2) {
-        announce.textContent = "You lose! Scissors beat Paper.";
+        announce.textContent = "Robot wins! Scissors beat Paper.";
         computerScore ++;
-        score.textContent = computerScore + " : " + playerScore;
-        return computerScore;
+        score.textContent = playerScore + " : " + computerScore;
+        // return computerScore;
     }
     else if (computer === 1 && player === 3) {
-        announce.textContent = "You lose! Rock beats Scissors.";
+        announce.textContent = "Robot wins! Rock beats Scissors.";
         computerScore ++;
-        score.textContent = computerScore + " : " + playerScore;
-        return computerScore;
+        score.textContent = playerScore + " : " + computerScore;
+        // return computerScore;
     }
 }
 
