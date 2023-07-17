@@ -1,4 +1,4 @@
-
+const announce = document.querySelector('h2');
 // Player choice
 const playerChoice = Array.from(document.querySelectorAll('button'));
 let computerScore = 0;
@@ -30,39 +30,39 @@ function getComputerChoice(){
 function playRound(computer, player) {
 
     if (computer === player) {
-        alert('It\'s a tie!');
+        announce.textContent = 'It\'s a tie!';
         playerScore ++;
         computerScore ++;
         return playerScore, computerScore;
     }
     else if (computer === 1 && player === 2) {
-        alert("You win! Paper beats Rock")
+        announce.textContent = "You win! Paper beats Rock.";
         playerScore ++;
         return playerScore;
     }
     else if (computer === 2 && player === 3) {
-        alert("You win! Scissors beat Paper")
+        announce.textContent = "You win! Scissors beat Paper.";
         playerScore ++;
         return playerScore;
     }
     else if (computer === 3 && player === 1) {
-        alert("You win! Rock beats Scissors")
+        announce.textContent = "You win! Rock beats Scissors.";
         playerScore ++;
         return playerScore;
     }
     
     else if (computer === 2 && player === 1) {
-        alert("You lose! Paper beats Rock")
+        announce.textContent = "You lose! Paper beats Rock.";
         computerScore ++;
         return computerScore;
     }
     else if (computer === 3 && player === 2) {
-        alert("You lose! Scissors beat Paper")
+        announce.textContent = "You lose! Scissors beat Paper.";
         computerScore ++;
         return computerScore;
     }
     else if (computer === 1 && player === 3) {
-        alert("You lose! Rock beats Scissors")
+        announce.textContent = "You lose! Rock beats Scissors.";
         computerScore ++;
         return computerScore;
     }
