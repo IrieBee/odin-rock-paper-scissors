@@ -54,7 +54,9 @@ button {
 }
 
 button:hover, #restart:hover {
-    box-shadow: 2px 2px 40px  hsl(180, 40%, 26%);
+    box-shadow: 15px 15px 40px  hsl(180, 50%, 8%);
+    background-color: hsl(330, 40%, 20%);
+    color: hsl(330, 50%, 90%);
 }
 
 #rock {
