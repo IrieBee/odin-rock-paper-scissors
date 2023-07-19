@@ -11,6 +11,7 @@ let playerScore = 0;
 
 playerChoice.forEach(choice => {
     choice.onclick =  () => {
+        // Check if score less than 5
         if (playerScore < 5 && computerScore < 5) {
             let playerSelection =  playerChoice.indexOf(choice) + 1;
     
