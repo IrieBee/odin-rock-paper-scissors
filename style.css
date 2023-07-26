@@ -5,6 +5,7 @@
 }
 
 :root {
+    /* Colors */
     --clr-primary-200: hsl(180, 50%, 8%);
     --clr-primary-400: hsl(180, 40%, 16%);
 
@@ -13,7 +14,16 @@
     --clr-secondary-600: hsl(330, 40%, 40%);
     --clr-secondary-900: hsl(330,50%, 90%);
 
+    /* Border */
     --br: 50%;
+
+    /* Font */
+    --fs-h1: bold 5rem Verdana;
+    --fs-h2: bold italic 3.3rem Verdana;
+    --fs-h3: bold 2.8rem Verdana;
+    --fs-h4: bold 2rem Verdana;
+    --fs-h5: bold 2rem Verdana;
+    --fs-btn: bold 1.5rem Verdana;
 }
 
 body {
@@ -22,7 +32,7 @@ body {
 
 h1 {
     background-color: var(--clr-secondary-400);
-    font: bold 44px Verdana;
+    font: var(--fs-h1);
     border-bottom: 5px solid var(--clr-secondary-200);
 }
 
@@ -35,7 +45,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-    font: bold italic 32px Verdana;
+    font: var(--fs-h2);
     border-bottom: 5px solid var(--clr-primary-200);
 }
 
@@ -45,14 +55,18 @@ h2 {
  
 }
 
+h4 {
+    font: var(--fs-h4);
+}
+
 h5{
-    font: bold 28px Verdana;
+    font: var(--fs-h5);
     letter-spacing: 6px;
     word-spacing: 3rem;
 }
 
 h3 {
-    font: bold 30px Verdana;
+    font: var(--fs-h3);
 }
 
 button {
@@ -61,7 +75,7 @@ button {
     border-radius: var(--br);
     border: 3px solid var(--clr-secondary-600);
     box-shadow: 10px 10px 20px var(--clr-primary-200);
-    font: bold 20px Verdana;
+    font: var(--fs-btn);
     color: hsl(180, 50%, 8%)
 }
 
@@ -91,7 +105,7 @@ button:hover, #restart:hover {
     border-radius: var(--br);
     border: 3px double var(--clr-secondary-900);
     box-shadow: 10px 10px 20px var(--clr-primary-200);
-    font: bold 20px Verdana;
+    font: var(--fs-btn);
     color: var(--clr-secondary-900);
     letter-spacing: 1.5px;
 }
