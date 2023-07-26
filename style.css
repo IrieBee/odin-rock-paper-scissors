@@ -7,11 +7,13 @@
 :root {
     --clr-primary-200: hsl(180, 50%, 8%);
     --clr-primary-400: hsl(180, 40%, 16%);
-    
+
     --clr-secondary-200: hsl(330, 40%, 8%);
     --clr-secondary-400: hsl(330, 40%, 20%);
     --clr-secondary-600: hsl(330, 40%, 40%);
     --clr-secondary-900: hsl(330,50%, 90%);
+
+    --br: 50%;
 }
 
 body {
@@ -56,7 +58,7 @@ h3 {
 button {
     background-color: var(--clr-secondary-900);
     padding: 16px 32px;
-    border-radius: 50%;
+    border-radius: var(--br);
     border: 3px solid var(--clr-secondary-600);
     box-shadow: 10px 10px 20px var(--clr-primary-200);
     font: bold 20px Verdana;
@@ -86,7 +88,7 @@ button:hover, #restart:hover {
 #restart {
     background-color: var(--clr-secondary-600);
     padding: 12px 24px;
-    border-radius: 45%;
+    border-radius: var(--br);
     border: 3px double var(--clr-secondary-900);
     box-shadow: 10px 10px 20px var(--clr-primary-200);
     font: bold 20px Verdana;
