@@ -18,20 +18,28 @@
     --br: 50%;
 
     /* Font */
-    --fs-h1: bold 5rem Verdana;
+    /* --fs-h1: bold 5rem Verdana;
     --fs-h2: bold italic 3.3rem Verdana;
     --fs-h3: bold 2.8rem Verdana;
     --fs-h4: bold 2rem Verdana;
     --fs-h5: bold 2rem Verdana;
-    --fs-btn: bold 1.5rem Verdana;
+    --fs-btn: bold 1.5rem Verdana; */
+    --fs-h1: bold 5vh Verdana;
+    --fs-h2: bold italic 3.5vh Verdana;
+    --fs-h3: bold 3.5vh Verdana;
+    --fs-h4: bold 2.5vh Verdana;
+    --fs-h5: bold 2.75vh Verdana;
+    --fs-btn: bold 2vh Verdana;
 
-    /* Other */
+    /* Padding and letter-spacing */
     --pdn-h: 1em;
-    --ltr-spc: 0.3rem;
+    --ltr-spc: 0.3em;
 }
+
 
 body {
     background-color: var(--clr-primary-400);
+    padding-bottom: 5em;
 }
 
 h1 {
@@ -99,7 +107,7 @@ button:hover, #restart:hover {
 .button {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 5em;
+    margin-top: 10vh;
 }
 
 #restart {
@@ -116,6 +124,6 @@ button:hover, #restart:hover {
 .restart {
     display: flex;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 10vh;
     padding-left: .3rem;
 }
