@@ -24,6 +24,10 @@
     --fs-h4: bold 2rem Verdana;
     --fs-h5: bold 2rem Verdana;
     --fs-btn: bold 1.5rem Verdana;
+
+    /* Other */
+    --pdn-h: 1em;
+    --ltr-spc: 0.3rem;
 }
 
 body {
@@ -33,20 +37,20 @@ body {
 h1 {
     background-color: var(--clr-secondary-400);
     font: var(--fs-h1);
-    border-bottom: 5px solid var(--clr-secondary-200);
+    border-bottom: 0.5rem solid var(--clr-secondary-200);
 }
 
 h1, h2, h3, h4, h5 {
     color: var(--clr-secondary-900);
-    letter-spacing: 5px;
+    letter-spacing: var(--ltr-spc);
     word-spacing: 1rem;
-    padding: 32px;
+    padding: var(--pdn-h);
     text-align: center;
 }
 
 h2 {
     font: var(--fs-h2);
-    border-bottom: 5px solid var(--clr-primary-200);
+    border-bottom: 0.5rem solid var(--clr-primary-200);
 }
 
 .score {
@@ -61,7 +65,6 @@ h4 {
 
 h5{
     font: var(--fs-h5);
-    letter-spacing: 6px;
     word-spacing: 3rem;
 }
 
@@ -71,48 +74,48 @@ h3 {
 
 button {
     background-color: var(--clr-secondary-900);
-    padding: 16px 32px;
+    padding: 1em 2em;
     border-radius: var(--br);
-    border: 3px solid var(--clr-secondary-600);
-    box-shadow: 10px 10px 20px var(--clr-primary-200);
+    border: 0.2rem solid var(--clr-secondary-600);
+    box-shadow: 0.6rem 0.6rem 1.4rem var(--clr-primary-200);
     font: var(--fs-btn);
-    color: hsl(180, 50%, 8%)
+    color: var(--clr-primary-200);
 }
 
 button:hover, #restart:hover {
-    box-shadow: 15px 15px 40px  var(--clr-primary-200);
+    box-shadow: 1rem 1rem 2.2rem  var(--clr-primary-200);
     background-color: var(--clr-secondary-400);
     color: var(--clr-secondary-900);
 }
 
 #rock {
-    padding: 16px 44px;
+    padding: 1em 2.5em;
 }
 
 #paper {
-    padding: 16px 43px;
+    padding: 1em 2.4em;
 }
 
 .button {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 5em;
 }
 
 #restart {
     background-color: var(--clr-secondary-600);
-    padding: 12px 24px;
+    padding: 1em 2em;
     border-radius: var(--br);
-    border: 3px double var(--clr-secondary-900);
-    box-shadow: 10px 10px 20px var(--clr-primary-200);
+    border: 0.2rem double var(--clr-secondary-900);
+    box-shadow: 1rem 1rem 2.2rem var(--clr-primary-200);
     font: var(--fs-btn);
     color: var(--clr-secondary-900);
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1rem;
 }
 
 .restart {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    padding-left: 5px;
+    margin-top: 5em;
+    padding-left: .3rem;
 }
