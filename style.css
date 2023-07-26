@@ -4,18 +4,28 @@
     padding: 0;
 }
 
+:root {
+    --clr-primary-200: hsl(180, 50%, 8%);
+    --clr-primary-400: hsl(180, 40%, 16%);
+    
+    --clr-secondary-200: hsl(330, 40%, 8%);
+    --clr-secondary-400: hsl(330, 40%, 20%);
+    --clr-secondary-600: hsl(330, 40%, 40%);
+    --clr-secondary-900: hsl(330,50%, 90%);
+}
+
 body {
-    background-color: hsl(180, 40%, 16%);
+    background-color: var(--clr-primary-400);
 }
 
 h1 {
-    background-color: hsl(330, 40%, 20%);
+    background-color: var(--clr-secondary-400);
     font: bold 44px Verdana;
-    border-bottom: 5px solid hsl(330, 40%, 8%);
+    border-bottom: 5px solid var(--clr-secondary-200);
 }
 
 h1, h2, h3, h4, h5 {
-    color: hsl(330, 50%, 90%);
+    color: var(--clr-secondary-900);
     letter-spacing: 5px;
     word-spacing: 1rem;
     padding: 32px;
@@ -24,7 +34,7 @@ h1, h2, h3, h4, h5 {
 
 h2 {
     font: bold italic 32px Verdana;
-    border-bottom: 5px solid hsl(180, 50%, 8%);
+    border-bottom: 5px solid var(--clr-primary-200);
 }
 
 .score {
@@ -44,19 +54,19 @@ h3 {
 }
 
 button {
-    background-color: hsl(330, 50%, 90%);
+    background-color: var(--clr-secondary-900);
     padding: 16px 32px;
     border-radius: 50%;
-    border: 3px solid hsl(330, 40%, 40%);
-    box-shadow: 10px 10px 20px hsl(180, 50%, 8%);
+    border: 3px solid var(--clr-secondary-600);
+    box-shadow: 10px 10px 20px var(--clr-primary-200);
     font: bold 20px Verdana;
     color: hsl(180, 50%, 8%)
 }
 
 button:hover, #restart:hover {
-    box-shadow: 15px 15px 40px  hsl(180, 50%, 8%);
-    background-color: hsl(330, 40%, 20%);
-    color: hsl(330, 50%, 90%);
+    box-shadow: 15px 15px 40px  var(--clr-primary-200);
+    background-color: var(--clr-secondary-400);
+    color: var(--clr-secondary-900);
 }
 
 #rock {
@@ -74,13 +84,13 @@ button:hover, #restart:hover {
 }
 
 #restart {
-    background-color: hsl(330, 40%, 40%);
+    background-color: var(--clr-secondary-600);
     padding: 12px 24px;
     border-radius: 45%;
-    border: 3px double hsl(330, 50%, 90%);
-    box-shadow: 10px 10px 20px hsl(180, 50%, 8%);
+    border: 3px double var(--clr-secondary-900);
+    box-shadow: 10px 10px 20px var(--clr-primary-200);
     font: bold 20px Verdana;
-    color: hsl(330, 50%, 90%);
+    color: var(--clr-secondary-900);
     letter-spacing: 1.5px;
 }
 
