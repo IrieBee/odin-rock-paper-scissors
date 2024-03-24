@@ -7,7 +7,7 @@ This is a solution to the Odin project Rock-paper-scissors.
 
 ### Screenshot
 
-![screenshot](https://github.com/ltsyBitsy/odin-rock-paper-scissors/blob/main/images/screenshot.jpg)
+![screenshot](https://github.com/IrieBee/odin-rock-paper-scissors/blob/main/images/screenshot.jpg)
 
 ## Built with
 
@@ -21,8 +21,8 @@ This is a solution to the Odin project Rock-paper-scissors.
 
 ## Links
 
-* Solution URL: https://github.com/ltsyBitsy/odin-rock-paper-scissors
-* Live Site URL: https://ltsybitsy.github.io/odin-rock-paper-scissors/
+* Solution URL: https://github.com/IrieBee/odin-rock-paper-scissors
+* Live Site URL: https://IrieBee.github.io/odin-rock-paper-scissors/
 
 ## Useful resources
 
